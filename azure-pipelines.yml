@@ -1,0 +1,23 @@
+# Starter pipeline
+- task: katalonTask@0
+  inputs:
+    version: '7.7.1'
+    executeArgs: '-projectPath="D:\a\1\s\web-service-tests.prj" -browserType="Web Service" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/All Test Cases" -apiKey="3aece929-d69a-4562-9046-197595b247fd" -executionProfile="default"'
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
